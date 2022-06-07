@@ -8,6 +8,7 @@ import { Country } from '../../interfaces/pais.interface';
 })
 export class PaisInputComponent implements OnInit {
 
+  @Input() placeholder: string = "Buscale papito sin miedo";
   @Output() onEnter: EventEmitter<string> = new EventEmitter<string>();
   @Output() onDebounce: EventEmitter<string> = new EventEmitter<string>();
   
