@@ -14,6 +14,7 @@ export class PaisTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
