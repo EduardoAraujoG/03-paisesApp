@@ -1,1 +1,47 @@
-<p>ver-pais works!</p>
+<div *ngIf="!pais; else divPais" class="alert alert-info">
+    Espere, por favor
+</div>
+<ng-template #divPais>
+    <div class="row">
+        <div class="col-12">
+            <h1>Pais: <small>{{pais[0].name.common}}</small></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img class="img-thumbnail" [src] ="pais[0].flags.svg" alt="{{ pais[0].name.common">
+        </div>
+        <div class="col">
+            <h3>Información</h3>
+            <ul class="list-group">
+            <li class="list-group-item list-group-item-primary">
+                <strong>Nombre: </strong> {{pais[0].name.common}}
+            </li>
+            <li class="list-group-item list-group-item-action list-group-item-light">
+                <strong>Nombre Oficial: </strong> {{pais[0].name.official}}
+            </li>
+            <li class="list-group-item list-group-item-action list-group-item-light">
+                <strong>Nombre en inglés: </strong> {{pais[0].name.common}}
+            </li>
+            <li class="list-group-item list-group-item-action list-group-item-light">
+                <strong>Población: </strong> {{pais[0].population | number}}
+            </li>
+            <li class="list-group-item list-group-item-action list-group-item-light">
+                <strong>Capital: </strong> {{pais[0].capital[0]}}
+            </li>
+            <li class= "list-group-item list-group-item-primary">
+                <strong>Inicio de semana: </strong> {{pais[0].startOfWeek}}
+            </li>
+        </ul>
+            </div>
+        </div>
+        <h3> Traduccion</h3>
+        <div class="row">
+            <div class="col">
+            <span *ngFor="let lenguaje of pais[0].translations | keyvalue" class = "badge text-bg-primary mx-2">
+                {{ lenguaje.value.common}}
+            </span>
+        </div>
+    </div>
+</ng-template>
