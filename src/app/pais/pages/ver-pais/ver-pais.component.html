@@ -4,7 +4,7 @@
 <ng-template #divPais>
     <div class="row">
         <div class="col-12">
-            <h1>Pais: <small>{{pais[0].name.common}}</small></h1>
+            <h1 class="animate__animated animate__fadeInDownBig">Pais: <small>{{pais[0].name.common}}</small></h1>
         </div>
     </div>
     <div class="row">
@@ -18,19 +18,19 @@
             <li class="list-group-item list-group-item-primary">
                 <strong>Nombre: </strong> {{pais[0].name.common}}
             </li>
-            <li class="list-group-item list-group-item-action list-group-item-light">
+            <li class="list-group-item list-group-item-action list-group-item-light animate__animated animate__bounce">
                 <strong>Nombre Oficial: </strong> {{pais[0].name.official}}
             </li>
-            <li class="list-group-item list-group-item-action list-group-item-light">
+            <li class="list-group-item list-group-item-action list-group-item-light animate__animated animate__bounce">
                 <strong>Nombre en inglés: </strong> {{pais[0].name.common}}
             </li>
-            <li class="list-group-item list-group-item-action list-group-item-light">
+            <li class="list-group-item list-group-item-action list-group-item-light animate__animated animate__bounce">
                 <strong>Población: </strong> {{pais[0].population | number}}
             </li>
-            <li class="list-group-item list-group-item-action list-group-item-light">
+            <li class="list-group-item list-group-item-action list-group-item-light animate__animated animate__bounce">
                 <strong>Capital: </strong> {{pais[0].capital[0]}}
             </li>
-            <li class= "list-group-item list-group-item-primary">
+            <li class= "list-group-item list-group-item-primary animate__animated animate__bounce">
                 <strong>Inicio de semana: </strong> {{pais[0].startOfWeek}}
             </li>
         </ul>
